@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Wedding Organizer</title>
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<script src="jquery-3.4.0.min.js"></script>
+		<style>
+			*{
+				margin: 0;
+			}
+			@font-face{
+				font-family: Postamt;
+				src: url('Postamt.ttf');
+			}
+			body{
+				display: flex;
+			}
+			.side-menu{
+				background: #fefefe;
+				border-right: 1px solid #ddd;
+				position: fixed;
+				height: 100%;
+			}
+			.body{
+				margin-left: 3rem;
+			}
+			.side-menu ul{
+				color: #d9d9d9;
+				padding: 0;
+				list-style: none;
+			}
+			.side-menu ul li{
+				padding: 1rem;
+				cursor: pointer;
+				text-align: center;
+			}
+			.side-menu ul li:hover, .side-menu ul li:focus{
+				color: coral;
+				padding: 1rem;
+				cursor: pointer;
+				text-align: center;
+			}
+			.active{
+				border-bottom: 1px solid #dadada;
+				color: coral;
+			}
+			.top{
+				background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAAEFsT2yAAAACXBIWXMAAAsSAAALEgHS3X78AAAAFElEQVR4nGNhYGBwYIET////ZwAAETIDym2lzEcAAAAASUVORK5CYII=), 
+					url('images/bride.jpg');
+				background-position: bottom;
+				height: 400px;
+				display: flex;
+			}
+			.top .company{
+				text-align: center;
+				text-shadow: 0px 3px 2px #d9d9d9;
+				font-family: Postamt !important;
+				font-weight: bold;
+				color: white;
+				margin: auto !important;
+			}
+			.content{
+				padding: 1rem;
+				display: flex;
+			}
+			.item{
+				float: left;
+				width: 30%;
+				border: 1px solid #ddd;
+				border-radius: 3px;
+				box-shadow: 0px 1px 3px #d9d9d9;
+				display: grid;
+				font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+			}
+			.item img{
+				width: 100%;
+			}
+			.item .item-info{
+				padding: 1rem;
+			}
+			.item .item-info i{
+				color: coral;
+			}
+			.item .item-desc{
+				margin-top: .5rem;
+			}
+			.footer{
+				margin-top: 1rem;
+			}
+			
+			.w-50{ 
+				width: 50%;
+			}
+			.w-100{
+				width: 100%;
+			}
+			.text-right{
+				text-align: right;
+			}
+			.cursor{
+				cursor: pointer;
+			}
+			.d-flex{
+				display: flex;
+			}
+			.d-grid{
+				display: grid;
+			}
+			.bold{
+				font-weight: bold;
+			}
+		</style>
+  </head>
+  <body>
+		<div class="side-menu">
+			<ul>
+				<li class="active"><i class="fa fa-home"></i></li>
+				<li><i class="fa fa-shopping-cart"></i></li>
+				<li><i class="fa fa-info"></i></li>
+			</ul>
+		</div>
+		<div class="body">
+			<div class="top">
+				<div class="company">
+					<h1>Wedding Organizer</h1>
+				</div>
+			</div>
+			<div class="content">
+				<div class="item">
+					<img src="images/bride.jpg">
+					<div class="item-info d-grid">
+						<div class="w-100 d-flex">
+							<label class="w-50 bold">Title</label>
+							<label class="w-50 text-right"><i class="fa fa-cart-plus cursor"></i></label>
+						</div>
+						<div class="w-100 item-desc">
+							Description
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<img src="images/bride.jpg">
+					<div class="item-info d-grid">
+						<div class="w-100 d-flex">
+							<label class="w-50 bold">Title</label>
+							<label class="w-50 text-right"><i class="fa fa-cart-plus cursor"></i></label>
+						</div>
+						<div class="w-100 item-desc">
+							Description
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<img src="images/bride.jpg">
+					<div class="item-info d-grid">
+						<div class="w-100 d-flex">
+							<label class="w-50 bold">Title</label>
+							<label class="w-50 text-right"><i class="fa fa-cart-plus cursor"></i></label>
+						</div>
+						<div class="w-100 item-desc">
+							Description
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer">
+				
+			</div>
+		</div>
+  </body>
+	<script>
+		
+		if($(window).width() < 760){
+			doMobile();
+		}else{
+			doDesktop();
+		}
+		$(window).on('resize', function(){
+			if($(this).width() < 760){
+				doMobile();
+			}else{
+				doDesktop();
+			}
+		});
+		
+		function doDesktop(){
+			$(".item").css('width','30%');
+			$(".company").css('font-size','2rem');
+			$(".content").css('display','flex');
+			$(".item").css('margin','1rem');
+		}
+		function doMobile(){
+			$(".item").css('width','100%');
+			$(".company").css('font-size','');
+			$(".content").css('display','grid');
+			$(".item").css('margin','.5rem 0');
+		}
+	</script>
+</html>
