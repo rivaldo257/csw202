@@ -62,27 +62,35 @@
 			}
 			.content{
 				padding: 1rem;
-				display: flex;
+				display: grid;
 			}
-			.item{
+			.item, .place{
 				float: left;
-				width: 30%;
 				border: 1px solid #ddd;
 				border-radius: 3px;
 				box-shadow: 0px 1px 3px #d9d9d9;
 				display: grid;
 				font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+				margin: auto !important;
 			}
-			.item img{
+			.item{
+				width: 30%;
+			}
+			.place{
+				border: 1px solid #ddd;
+				border-radius: 3px;
+				box-shadow: 0px 1px 3px #d9d9d9;
+			}
+			.item img, .place img{
 				width: 100%;
 			}
-			.item .item-info{
+			.item .item-info, .place .item-info{
 				padding: 1rem;
 			}
-			.item .item-info i{
+			.item .item-info i, .place .item-info i{
 				color: coral;
 			}
-			.item .item-desc{
+			.item .item-desc, .place item-desc{
 				margin-top: .5rem;
 			}
 			.footer{
@@ -116,6 +124,15 @@
 			p::first-letter { 
 				margin-left: 2rem;
 			}
+			.footer{
+				background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAAEFsT2yAAAACXBIWXMAAAsSAAALEgHS3X78AAAAFElEQVR4nGNhYGBwYIET////ZwAAETIDym2lzEcAAAAASUVORK5CYII=), 
+					#000;
+				color: #FFF;
+				font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+				font-size: 3rem;
+				text-align: center;
+				padding: 3rem;
+			}
 		</style>
   </head>
   <body>
@@ -144,6 +161,7 @@
 				</div>
 			</div>
 			<div class="content">
+				<div class="w-100 d-flex">
 				<div class="item">
 					<img src="images/bride.jpg">
 					<div class="item-info d-grid">
@@ -179,6 +197,45 @@
 							Description
 						</div>
 					</div>
+				</div>
+				</div>
+				<div class="w-100 d-flex" style="margin-top: 1rem">
+				<div class="item">
+					<img src="images/bride.jpg">
+					<div class="item-info d-grid">
+						<div class="w-100 d-flex">
+							<label class="w-50 bold">Title</label>
+							<label class="w-50 text-right"><i class="fa fa-cart-plus cursor"></i></label>
+						</div>
+						<div class="w-100 item-desc">
+							Description
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<img src="images/bride.jpg">
+					<div class="item-info d-grid">
+						<div class="w-100 d-flex">
+							<label class="w-50 bold">Title</label>
+							<label class="w-50 text-right"><i class="fa fa-cart-plus cursor"></i></label>
+						</div>
+						<div class="w-100 item-desc">
+							Description
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<img src="images/bride.jpg">
+					<div class="item-info d-grid">
+						<div class="w-100 d-flex">
+							<label class="w-50 bold">Title</label>
+							<label class="w-50 text-right"><i class="fa fa-cart-plus cursor"></i></label>
+						</div>
+						<div class="w-100 item-desc">
+							Description
+						</div>
+					</div>
+				</div>
 				</div>
 			</div>
 			<div class="d-flex" style="box-shadow:  0px 2px 3px #d9d9d9; border-top: 1px solid #ddd">
@@ -191,9 +248,53 @@
 					</p>
 				</div>
 			</div>
-			<div class="d-flex" style="box-shadow:  0px 2px 3px #d9d9d9; border-top: 1px solid #ddd; margin: 2rem">
-				<div style="width: 80%; height: 10rem">
-					
+			<div class="d-flex" style="box-shadow:  0px 2px 3px #d9d9d9; border-top: 1px solid #ddd; margin: 2rem; border-radius: 3px; ">
+				<div style="width: 80%; display: flex; margin: auto !important;">
+					<div class="place" style="width: 30%; border-radius: 0 0rem 13px 13px;">
+						<img src="images/bride.jpg">
+						<div class="item-info d-grid">
+							<div class="w-100 d-flex">
+								<label class="w-50 bold">Title</label>
+								<label class="w-50 text-right"><i class="fa fa-cart-plus cursor"></i></label>
+							</div>
+							<div class="w-100 item-desc">
+								Description
+							</div>
+						</div>
+						<div style="text-align: center; padding: .5rem 0; background: coral; color: white; border-radius: 0 0rem 13px 13px; cursor: pointer">
+							View More
+						</div>
+					</div>
+					<div class="place" style="width: 30%; border-radius: 0 0rem 13px 13px;">
+						<img src="images/bride.jpg">
+						<div class="item-info d-grid">
+							<div class="w-100 d-flex">
+								<label class="w-50 bold">Title</label>
+								<label class="w-50 text-right"><i class="fa fa-cart-plus cursor"></i></label>
+							</div>
+							<div class="w-100 item-desc">
+								Description
+							</div>
+						</div>
+						<div style="text-align: center; padding: .5rem 0; background: coral; color: white; border-radius: 0 0rem 13px 13px; cursor: pointer">
+							View More
+						</div>
+					</div>
+					<div class="place" style="width: 30%; border-radius: 0 0rem 13px 13px;">
+						<img src="images/bride.jpg">
+						<div class="item-info d-grid">
+							<div class="w-100 d-flex">
+								<label class="w-50 bold">Title</label>
+								<label class="w-50 text-right"><i class="fa fa-cart-plus cursor"></i></label>
+							</div>
+							<div class="w-100 item-desc">
+								Description
+							</div>
+						</div>
+						<div style="text-align: center; padding: .5rem 0; background: coral; color: white; border-radius: 0 0rem 13px 13px; cursor: pointer">
+							View More
+						</div>
+					</div>
 				</div>
 				<div style="width: 20%; display: grid; border-left: 2px solid #eee">
 					<img src="images/amanda-mocci-1373295-unsplash.jpg" style="width: 100%">
@@ -202,14 +303,15 @@
 					</p>
 				</div>
 			</div>
+			
 			<div class="footer">
-				
+				<h5>Wedding Organizer</h5>
 			</div>
 		</div>
   </body>
 	<script>
 		
-		if($(window).width() < 760){
+		/*if($(window).width() < 760){
 			doMobile();
 		}else{
 			doDesktop();
@@ -233,6 +335,6 @@
 			$(".company").css('font-size','');
 			$(".content").css('display','grid');
 			$(".item").css('margin','.5rem 0');
-		}
+		}*/
 	</script>
 </html>
