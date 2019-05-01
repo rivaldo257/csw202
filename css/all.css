@@ -101,6 +101,15 @@ body{
 .card-left{
   display: flex;
 }
+.big-card-image-1{
+  background: url('../images/morgan-mcdonald-401225-unsplash.jpg'); background-size: cover
+}
+.big-card-image-2{
+  background: url('../images/chuttersnap-176529-unsplash.jpg'); background-size: cover; background-position: center;
+}
+.big-card-info{
+  padding: 3rem 2rem
+}
 .big-card-title{
   font-size: 1.5rem;
 }
