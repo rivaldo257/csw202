@@ -21,13 +21,13 @@
         <label class="big-card-title">Hello There!</label>
         <p class="big-card-desc">
             Are you looking for an organizer for your wedding? Where you can give the best wedding party for your loved ones?
-            We take this in serious manner, we feel to have the responsibility, a calling to help people give the best for their loved ones! 
+            We take this in serious manner, we feel to have the responsibility, a calling to help people give the best for their loved ones!
             So here we are, ready to help you, to make sure your loved ones dream come true. We prepare, you decide!
         </p>
       </div>
     </div>
     <div class="content">
-      <div class="w-100 d-flex">
+      <div class="w-100 d-flex content-item">
         <div class="item">
             <a href="1-bronze-packet.html">
           <img src="images/shelly-pence-662726-unsplash.jpg">
@@ -71,7 +71,7 @@
         </a>
         </div>
       </div>
-      <div class="w-100 d-flex mt-1">
+      <div class="w-100 d-flex mt-1 content-item">
         <div class="item">
           <a href="4-platinum-packet.html">
           <img src="images/wu-jianxiong-266198-unsplash.jpg">
@@ -195,7 +195,7 @@
 </body>
 <script>
 
-/*if($(window).width() < 760){
+if($(window).width() < 760){
 doMobile();
 }else{
 doDesktop();
@@ -209,16 +209,45 @@ doDesktop();
 });
 
 function doDesktop(){
-$(".item").css('width','30%');
 $(".company").css('font-size','2rem');
-$(".content").css('display','flex');
-$(".item").css('margin','1rem');
+$(".footer").css('font-size','3rem');
+$(".footer").css('padding','3rem');
+$(".content-item").css('display','flex');
+$(".item").css("width",'30%');
+$(".sec-1").css('display','flex');
+$(".sec-2").css('display','flex');
+$(".big-card-image-1").css('width','50%');
+$(".big-card-image-1").css('height','');
+$(".big-card-image-2").css('width','50%');
+$(".big-card-image-2").css('height','');
+$(".big-card-info").css('width','50%');
+$(".big-card-info").css('padding','3rem 2rem');
+$(".place").css('width','30%');
+$(".sec-3").css('display','flex');
+$(".sec-3-inner").css('display','flex');
+$(".right-info").css('width','20%');
+$(".right-info").css('margin','');
+
 }
 function doMobile(){
-$(".item").css('width','100%');
 $(".company").css('font-size','');
-$(".content").css('display','grid');
-$(".item").css('margin','.5rem 0');
-}*/
+$(".footer").css('font-size','2rem');
+$(".footer").css('padding','3rem 0');
+$(".content-item").css('display','grid');
+$(".item").css("width",'100%');
+$(".sec-1").css('display','grid');
+$(".sec-2").css('display','grid');
+$(".big-card-image-1").css('width','100%');
+$(".big-card-image-1").css('height','10rem');
+$(".big-card-image-2").css('width','100%');
+$(".big-card-image-2").css('height','10rem');
+$(".big-card-info").css('width','100%');
+$(".big-card-info").css('padding','0');
+$(".place").css('width','100%');
+$(".sec-3").css('display','grid');
+$(".sec-3-inner").css('display','grid');
+$(".right-info").css('width','100%');
+$(".right-info").css('margin-top','1rem');
+}
 </script>
 </html>
