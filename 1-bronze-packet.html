@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <title>Bronze Packet</title>
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel="stylesheet" href="css/all.css">
@@ -23,23 +24,23 @@
           <div class="w-50 big-card-info">
             <label class="big-card-title">Bronze Packet</label>
             <p class="big-card-desc">
-                The Most Affordable (start $2500)<br/>
-                This packet is the most affordable you can get with the cheapest price available!<br/>
-                This also fits for you who wants a small party, with only close members.<br/>
-                Already include:
-                    <ol type="a">
-                        <li>Decoration (Outdoor tents, vase, etc)</li>
-                        <li>Chairs (max 50 pcs)</li>
-                        <li>Tables (max 10pcs)</li>
-                        <li>Photobooth!</li>
-                    </ol>
-                </p>
+              The Most Affordable (start $2500)<br/>
+              This packet is the most affordable you can get with the cheapest price available!<br/>
+              This also fits for you who wants a small party, with only close members.<br/>
+              Already include:
+              <ol type="a">
+                <li>Decoration (Outdoor tents, vase, etc)</li>
+                <li>Chairs (max 50 pcs)</li>
+                <li>Tables (max 10pcs)</li>
+                <li>Photobooth!</li>
+              </ol>
+            </p>
             <div class="w-100 d-flex">
               <div class="button">Contact</div>
             </div>
             <a href="index.html"><div class="w-100 d-flex">
-                <div class="button">Go Back</div>
-              </div></a>
+              <div class="button">Go Back</div>
+            </div></a>
           </div>
         </div>
       </div>
@@ -48,5 +49,38 @@
       <h5>- Wedding Organizer -</h5>
     </div>
   </div>
+  <script>
+  if($(window).width() < 760){
+    doMobile();
+  }else{
+    doDesktop();
+  }
+  $(window).on('resize', function(){
+    if($(this).width() < 760){
+      doMobile();
+    }else{
+      doDesktop();
+    }
+  });
+
+  function doDesktop(){
+    $(".company").css('font-size','2rem');
+    $(".footer").css('font-size','3rem');
+    $(".footer").css('padding','3rem');
+    $(".content").css('margin','0 2rem');
+    $(".w-50").css("width",'50%');
+    $('.big-card-info').css('padding','3rem 2rem');
+    $('.sec-details').css('display','flex');
+  }
+  function doMobile(){
+    $(".company").css('font-size','');
+    $(".footer").css('font-size','2rem');
+    $(".footer").css('padding','3rem 0');
+    $(".content").css('margin','0');
+    $(".w-50").css("width",'100%');
+    $('.big-card-info').css('padding','0');
+    $('.sec-details').css('display','grid');
+  }
+  </script>
 </body>
 </html>
