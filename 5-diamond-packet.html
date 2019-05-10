@@ -25,7 +25,7 @@
             <label class="big-card-title">Diamond Packet</label>
             <p class="big-card-desc">
               Her Invaluable Elegance (start $5500)<br>
-              A diamond time for you and your lover! Holds a bigger audience, with music, entertainment, and more! 
+              A diamond time for you and your lover! Holds a bigger audience, with music, entertainment, and more!
               If you have a huge family and several co-workers and your boss, this is it. A good time for everyone!<br/>
               include:
                     <ol type="a">
@@ -52,38 +52,6 @@
       <h5>- Wedding Organizer -</h5>
     </div>
   </div>
-  <script>
-  if($(window).width() < 760){
-    doMobile();
-  }else{
-    doDesktop();
-  }
-  $(window).on('resize', function(){
-    if($(this).width() < 760){
-      doMobile();
-    }else{
-      doDesktop();
-    }
-  });
-
-  function doDesktop(){
-    $(".company").css('font-size','2rem');
-    $(".footer").css('font-size','3rem');
-    $(".footer").css('padding','3rem');
-    $(".content").css('margin','0 2rem');
-    $(".w-50").css("width",'50%');
-    $('.big-card-info').css('padding','3rem 2rem');
-    $('.sec-details').css('display','flex');
-  }
-  function doMobile(){
-    $(".company").css('font-size','');
-    $(".footer").css('font-size','2rem');
-    $(".footer").css('padding','3rem 0');
-    $(".content").css('margin','0');
-    $(".w-50").css("width",'100%');
-    $('.big-card-info').css('padding','0');
-    $('.sec-details').css('display','grid');
-  }
-  </script>
+  <script src="place.js"></script>
 </body>
 </html>

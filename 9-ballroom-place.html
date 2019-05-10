@@ -25,7 +25,7 @@
             <label class="big-card-title">Ballroom (Starts $3000)</label>
             <p class="big-card-desc">
               Do you need a generous, indoor venue? Easy for you to plan and decorate in? Secure from mother nature's drought and drizzles?
-              Then a humble ballroom is what you need! With this affordable place and price, 
+              Then a humble ballroom is what you need! With this affordable place and price,
               your majestic occassion will be able to shine through beneath a stunning rooftop and lavish decor.
             </p>
             <div class="w-100 d-flex">
@@ -42,38 +42,6 @@
       <h5>- Wedding Organizer -</h5>
     </div>
   </div>
-  <script>
-  if($(window).width() < 760){
-    doMobile();
-  }else{
-    doDesktop();
-  }
-  $(window).on('resize', function(){
-    if($(this).width() < 760){
-      doMobile();
-    }else{
-      doDesktop();
-    }
-  });
-
-  function doDesktop(){
-    $(".company").css('font-size','2rem');
-    $(".footer").css('font-size','3rem');
-    $(".footer").css('padding','3rem');
-    $(".content").css('margin','0 2rem');
-    $(".w-50").css("width",'50%');
-    $('.big-card-info').css('padding','3rem 2rem');
-    $('.sec-details').css('display','flex');
-  }
-  function doMobile(){
-    $(".company").css('font-size','');
-    $(".footer").css('font-size','2rem');
-    $(".footer").css('padding','3rem 0');
-    $(".content").css('margin','0');
-    $(".w-50").css("width",'100%');
-    $('.big-card-info').css('padding','0');
-    $('.sec-details').css('display','grid');
-  }
-  </script>
+  <script src="place.js"></script>
 </body>
 </html>
